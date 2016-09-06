@@ -1,0 +1,47 @@
+import sys
+import json
+import os
+#import pushover
+from pushover import Client
+
+# Pushover Keys
+user_key = "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+api_token = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+
+#logFile = open("/home/kapacitor/.kapacitor/tasks/anova_alert_log.log", 'w')
+psClient = Client(user_key, api_token=api_token)
+
+data = json.load(sys.stdin)
+currentTemp = float(data['data']['series'][0]['values'][0][1])
+setTemp = float(data['message'])
+status = data['level']
+id = data['id']
+
+message =  "null"
+title = "null"
+priority = 0
+sound = ""
+
+if status == "OK":
+        message = r'<font color="green">' + status + r'</font>'  + ": " + id + " temperature is: " + str(currentTemp) + "F."
+        title = status + ": " + id
+        priority = 0
+        psClient.send_message(message,title=title,priority=priority,html=1)
+elif status == "INFO":
+        pass
+elif status == "WARN":
+        pass
+elif status == "CRITICAL":
+        message = r'<font color="red">' + status + r'</font>'  + ": " + id + " temperature is: " + str(currentTemp) + "F. Set Point is: " + str(setTemp) + "F."
+        title = status + ": " + id
+        priority = 2
+        sound = 'echo'
+        retry = 30
+        expire = 300
+        psClient.send_message(message,title=title,priority=priority,retry=retry,expire=expire,sound=sound,html=1)
+else:
+        pass
+
+#logFile.write(str(pushover.get_sounds()))
+
+#logFile.close()

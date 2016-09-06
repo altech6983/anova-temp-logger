@@ -1,0 +1,43 @@
+var setTemp = '145.0'
+
+var probe1 = stream
+        |from()
+                .measurement('temperature')
+                .where(lambda: "unit" == 'AnovaOne' AND "probe" == 'probe_1')
+
+var probe2 = stream
+        |from()
+                .measurement('temperature')
+                .where(lambda: "unit" == 'AnovaOne' AND "probe" == 'probe_2')
+
+probe1
+        |alert()
+                .id('Anova Probe 1')
+                .message(setTemp)
+                .crit(lambda: "value" < (float(setTemp) - 1.0))
+                .stateChangesOnly(5m)
+                .exec('python','/home/kapacitor/.kapacitor/tasks/anova_alert.py',setTemp)
+
+probe1
+        |alert()
+                .id('Anova Probe 1')
+                .message(setTemp)
+                .crit(lambda: "value" > (float(setTemp) + 1.0))
+                .stateChangesOnly(5m)
+                .exec('python','/home/kapacitor/.kapacitor/tasks/anova_alert.py',setTemp)
+
+probe2
+        |alert()
+                .id('Anova Probe 2')
+                .message(setTemp)
+                .crit(lambda: "value" < (float(setTemp) - 1.0))
+                .stateChangesOnly(5m)
+                .exec('python','/home/kapacitor/.kapacitor/tasks/anova_alert.py',setTemp)
+
+probe2
+        |alert()
+                .id('Anova Probe 2')
+                .message(setTemp)
+                .crit(lambda: "value" > (float(setTemp) + 1.0))
+                .stateChangesOnly(5m)
+                .exec('python','/home/kapacitor/.kapacitor/tasks/anova_alert.py',setTemp)

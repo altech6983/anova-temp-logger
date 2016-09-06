@@ -1,0 +1,37 @@
+-- WIFI Credentials
+SSID = "mywifi"
+SSID_PASS = "1234"
+
+-- InfluxDB Database Credentials
+LOG_USER = "myuser"
+LOG_PASS = "1234"
+
+-- InfluxDB address and database
+HOST = "192.168.1.6"
+DATABASE = "AnovaStats"
+
+-- Pin the temperature sensors are connected to
+TEMPERATUREPIN = 1
+
+-- The device ids of each probe
+PROBE1_ROMCODE = string.char(40,255,184,96,3,21,2,226)
+PROBE2_ROMCODE = string.char(40,255,186,108,3,21,2,115)
+
+-- Probe calibration values
+PROBE1_CAL = 0
+PROBE2_CAL = 0
+
+-- Where to store data in database and with what tag
+MEASUREMENT = "temperature"
+UNIT = "AnovaOne"
+
+-- How often updates are sent to influxdb (in ms)
+TEMP_UPDATE = 10000
+
+-- Number of samples to average (this doesn't seem to be needed, sensors are really stable)
+-- Delay between samples (in ms)
+TEMP_SAMPLES = 5
+TEMP_SAMP_DELAY = 50
+
+-- InfluxDB api
+URI = "/write?db=" .. DATABASE .. "&u=" .. LOG_USER .. "&p=" .. LOG_PASS
