@@ -2,7 +2,7 @@
 ##About
 I built this temperature logger to log the temperature of the Anova water bath over long cooks because I have heard stories of units freezing and not keeping the water warm or random temperature changes.
 
-**Note:** The random temperature changes happened for about 4 days before they pushed a fix. I have used it lots since then and have had no problems. The freezing is extremely rare and I have only seen two post on reddit about it.
+**Note:** The random temperature changes happened for about 4 days before they pushed a phone app update and said everything was fixed. I have used it lots since then and have had no problems. The freezing is extremely rare and I have only seen two post on reddit about it.
 
 ---
 
