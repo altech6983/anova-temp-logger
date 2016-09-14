@@ -157,6 +157,53 @@ The Kapacitor tick script calls [anova\_alert.py.template](/Kapacitor/anova_aler
 
 **This script has to be edited with the user key and app api key for pushover.**
 
+##Enclosure
+###Parts (links to Amazon)
+* 4-40 bolts and nuts (probably 3/8" or 1/2", I cut mine to fit)
+* [Female Headers](https://amzn.com/B00899WQ6U)
+* 1 - [Proto-board](https://amzn.com/B00NQ37V0K)
+* 1 - [Box](https://amzn.com/B00O9Y633G)
+* 2 - [1/8" Stereo Jack](https://amzn.com/B000ML4A2Q)
+* 2 - [1/8" Stereo Plugs](https://amzn.com/B00MFRZ2SG)
+
+This was a really tight fit in this box so you will have to be very carefull where you drill the holes for the jacks. You will also have to cut the supports out so that the board will fit in the box with the female headers. If you don't want to use female headers then you will be fine leaving them there.
+
+I also recommend a differnt plug because those are a little flimsy. Also no measurements as I did it all by eye, sorry.
+
+####Board Cut - Top
+![Board_Cut_Top](https://cloud.githubusercontent.com/assets/20709731/18496356/d81c774c-79ea-11e6-8ec8-1604a50bb831.jpg)
+
+####Board Cut - Angle
+![Board_Cut_Angle](https://cloud.githubusercontent.com/assets/20709731/18496358/d8244b48-79ea-11e6-90f5-ccfef28d3716.jpg)
+
+####Board - Bottom
+![Board_Bottom](https://cloud.githubusercontent.com/assets/20709731/18496355/d81b8620-79ea-11e6-82fd-91775fcce3ec.jpg)
+
+####Board - Top
+![Board_Top](https://cloud.githubusercontent.com/assets/20709731/18496353/d8101b78-79ea-11e6-9878-4e7e9742de13.jpg)
+
+####Jacks - Straight
+![Jacks_Straight](https://cloud.githubusercontent.com/assets/20709731/18496361/d8395e52-79ea-11e6-9e1e-b553c97137f7.jpg)
+
+####Jacks - Angle
+![Jacks_Angle](https://cloud.githubusercontent.com/assets/20709731/18496363/d847f732-79ea-11e6-9205-397943019c05.jpg)
+
+####Jacks Wired - Straight
+![Jacks_Wired_Straight](https://cloud.githubusercontent.com/assets/20709731/18496360/d8372e52-79ea-11e6-9c05-cdde045a2e2d.jpg)
+
+####Jacks Wired - Angle
+![Jacks_Wired_Angle](https://cloud.githubusercontent.com/assets/20709731/18496359/d82a383c-79ea-11e6-86e7-bb45c495a491.jpg)
+
+####Box with Bolts
+![Box_with_Bolts](https://cloud.githubusercontent.com/assets/20709731/18496354/d8181a94-79ea-11e6-8a78-83d3247458d1.jpg)
+
+####Box with nodemcu
+![Box_with_nodemcu](https://cloud.githubusercontent.com/assets/20709731/18496357/d8222480-79ea-11e6-8818-eeb948289ac4.jpg)
+
+####Box Top
+![Box_Top](https://cloud.githubusercontent.com/assets/20709731/18496362/d8418d70-79ea-11e6-88c7-6744a5056fe0.jpg)
+
+
 ##Thoughts
 * If a file has ".template" on the end that means there is stuff to edit inside
 
